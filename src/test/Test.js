@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { isThisTypeNode } from "typescript";
 
 export class TestClass extends Component {
 
