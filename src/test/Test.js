@@ -46,10 +46,13 @@ export class TestClass extends Component {
   startCounter(){
     var interval = setInterval( ()=> { 
       this.setState( 
-        ()=> ({count:this.state.count + 1, interval:interval}) ) 
+        (prevState)=> ({count:prevState.count + 1}) ) 
       }
       , 1000
     )
+    this.setState(
+      ()=> ({interval}) 
+    ) 
   }
   stopCounter(){
     clearInterval(this.state.interval);
